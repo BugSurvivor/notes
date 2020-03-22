@@ -33,5 +33,5 @@ jobs:
         cp -a notes BugSurvivor.github.io/source/_posts
         rm -rf BugSurvivor.github.io/source/_posts/.git
         cd BugSurvivor.github.io
-        git add --all && git commit -m"update" && git push origin hexo
+        git add --all && git commit -m"update notes" && git push origin hexo
         
