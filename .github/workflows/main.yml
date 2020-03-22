@@ -29,9 +29,10 @@ jobs:
         git config --global user.email jiandahao@gmail.com
         cd ..
         export TOKEN="${{ secrets.GH_TOKEN }}"
-        git clone -b hexo https://${TOKEN}@github.com/BugSurvivor/BugSurvivor.github.io.git
+        git clone -b hexo -depth 1 https://${TOKEN}@github.com/BugSurvivor/BugSurvivor.github.io.git
         cp -a notes BugSurvivor.github.io/source/_posts
         rm -rf BugSurvivor.github.io/source/_posts/.git
+        rm -rf BugSurvivor.github.io/source/_posts/.github
         cd BugSurvivor.github.io
         git add --all && git commit -m"update notes" && git push origin hexo
         
