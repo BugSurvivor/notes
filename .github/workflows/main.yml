@@ -25,6 +25,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: deploy to hexo blog
       run: |
+        git config --global user.name jiandahao
+        git config --global user.email jiandahao@gmail.com
         cd ..
         export TOKEN="${{ secrets.GH_TOKEN }}"
         git clone -b hexo https://${TOKEN}@github.com/BugSurvivor/BugSurvivor.github.io.git
