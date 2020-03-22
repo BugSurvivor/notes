@@ -31,6 +31,7 @@ jobs:
         export TOKEN="${{ secrets.GH_TOKEN }}"
         git clone -b hexo https://${TOKEN}@github.com/BugSurvivor/BugSurvivor.github.io.git
         cp -a notes BugSurvivor.github.io/source/_posts
+        rm -rf BugSurvivor.github.io/source/_posts/.git
         cd BugSurvivor.github.io
         git add --all && git commit -m"update" && git push origin hexo
         
